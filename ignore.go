@@ -5,6 +5,7 @@ var IGNORE = []string{
   
   // Environmental Variables
   ".env",
+  ".env.example",
   
   // Git
   ".git",
