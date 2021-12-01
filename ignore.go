@@ -2,12 +2,19 @@ package main
 
 // Ignore the files/directories (Along with default Additions)
 var IGNORE = []string{
+  
   // Environmental Variables
   ".env",
-
+  
   // Git
   ".git",
+  
+  // Binaries folder
+  "bin",
 
+  // Distributions
+  "dist",
+  
   // Go
   "go.mod",
   "go.sum",
