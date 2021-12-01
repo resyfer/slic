@@ -1,14 +1,24 @@
 package main
 
 import (
+	"flag"
 	"sort"
+	"strings"
 
 	"github.com/gookit/color"
 )
+
 var containedLanguages = []Language {}
 
 func main() {
-  traverseDirectory(".")
+  
+  ignore := flag.String("i", "", "Names of Files/Directories (only names, not paths) to ignore (write comma-separated names eg. -i=foo,bar.txt ) ")
+  directory := flag.String("d", ".", "Relative Path of Directory of Search (eg. -d=./src) ")
+  flag.Parse()
+
+  addIgnoreItems(*ignore)
+
+  traverseDirectory(*directory)
 
   addLanguagesToList()
   sortLanguages()
@@ -39,6 +49,17 @@ func sortLanguages() {
   sort.Slice(containedLanguages, func(i, j int) bool {
     return containedLanguages[i].percentage > containedLanguages[j].percentage
   })
+}
+
+// Add ignore items
+func addIgnoreItems(ignoreItems string) {
+
+  if ignoreItems == "" {
+    return
+  }
+
+  IGNORE = append(IGNORE, strings.Split(ignoreItems, ",")...)
+
 }
 
 // Print the langues
