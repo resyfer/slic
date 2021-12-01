@@ -1,7 +1,7 @@
 # slic
 
 Show Languages In Code. <br/>
-![image](https://user-images.githubusercontent.com/74897008/144322182-11f9809d-8f18-4eab-b3da-ef5065a8602d.png)
+![image](https://user-images.githubusercontent.com/74897008/144322182-11f9809d-8f18-4eab-b3da-ef5065a8602d.png) <br/>
 ![image](https://user-images.githubusercontent.com/74897008/144322301-e625aa07-000b-4775-b27b-4c72c460b243.png)
 
 <!-- A program to generate an image containing stats on the languages used inside a project. -->
