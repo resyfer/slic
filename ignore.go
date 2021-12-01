@@ -31,6 +31,23 @@ var IGNORE = []string{
   // Readme
   "README.md",
 
+  //Misc
+  "atomignore",
+  "babelignore",
+  "bzrignore",
+  "coffeelintignore",
+  "cvsignore",
+  "dockerignore",
+  "eleventyignore",
+  "eslintignore",
+  "gitignore",
+  "markdownlintignore",
+  "nodemonignore",
+  "npmignore",
+  "prettierignore",
+  "stylelintignore",
+  "vscodeignore",
+
 }
 
 // Check if item needs to be ignored or not

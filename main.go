@@ -11,6 +11,11 @@ import (
 var VERSION = "1.0.0"
 var containedLanguages = []Language {}
 
+type Language struct {
+  name string
+  percentage float64
+}
+
 func main() {
   
   ignore := flag.String("i", "", "Names of Files/Directories (only names, not paths) to ignore (write comma-separated names eg. -i=foo,bar.txt ) ")
