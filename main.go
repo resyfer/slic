@@ -8,6 +8,7 @@ import (
 	"github.com/gookit/color"
 )
 
+var VERSION = "1.0.0"
 var containedLanguages = []Language {}
 
 func main() {
@@ -15,6 +16,10 @@ func main() {
   ignore := flag.String("i", "", "Names of Files/Directories (only names, not paths) to ignore (write comma-separated names eg. -i=foo,bar.txt ) ")
   directory := flag.String("d", ".", "Relative Path of Directory of Search (eg. -d=./src) ")
   flag.Parse()
+
+  color.HEX("#F1E05A").Printf("Welcome to SLIC (Show Languages In Code) v%v\n\n", VERSION)
+  color.HEX("#9400FF").Printf("The Languages Are:\n")
+
 
   addIgnoreItems(*ignore)
 
