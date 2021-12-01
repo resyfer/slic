@@ -14,20 +14,25 @@ func traverseDirectory(directory string) {
     
     name := item.Name()
 
-    // Ignore some items
+    // Ignore specified items
     if doIgnore(name) {
       continue
     }
 
-    // If directory, go down recursively. If not, add to language counter.
     if item.IsDir() {
+      
+      // If directory, go down recursively
       traverseDirectory(directory + "/" + item.Name())
+
     } else {
+
+      //If not a directory, add to language counter.
+      
       extensionIndex := strings.IndexRune(name, '.')
 
-      extension := name[extensionIndex + 1:]
+      extension := name[extensionIndex + 1:] //Grabbing extension from name
 
-      // Increasing the respective counter of language
+      // Increasing the respective size counter of language
       language, found := EXTENSIONS[extension]
       itemInfo, _ := item.Info()
       if found {
@@ -35,7 +40,7 @@ func traverseDirectory(directory string) {
       } else {
         LANG["Other"]+= itemInfo.Size()
       }
-      TOTAL_SIZE+= itemInfo.Size()
+      TOTAL_SIZE+= itemInfo.Size() // Increase total size counter
     }
   }
 }

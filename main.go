@@ -7,7 +7,7 @@ func main() {
 
   for elem, val := range LANG {
     if val != 0 {
-      fmt.Printf("%v : %v\n", elem, val)
+      fmt.Printf("%v : %v%% \n", elem, float64(val) / float64(TOTAL_SIZE) * 100)
     }
   }
 }
