@@ -51,7 +51,7 @@ cd bin
 
 and run the executable binary
 
-### Usage
+## Usage
 
 Run it with an `-h` flag to list all commands.
 
