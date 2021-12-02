@@ -6,6 +6,13 @@ Show Languages In Code. <br/>
 
 <!-- A program to generate an image containing stats on the languages used inside a project. -->
 
+## Usage
+
+Run it with an `-h` flag to list all commands.
+
+`-d` flag can be used to specify the directory of search<br/>
+`-i` flag can be used to ignore certain files or directories.
+
 ## Installation
 
 NOTE: The binaries are only for x86, 64bit devices. For others, please compile from source.
@@ -50,10 +57,3 @@ cd bin
 ```
 
 and run the executable binary
-
-## Usage
-
-Run it with an `-h` flag to list all commands.
-
-`-d` flag can be used to specify the directory of search<br/>
-`-i` flag can be used to ignore certain files or directories.
